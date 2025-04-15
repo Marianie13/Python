@@ -35,12 +35,23 @@ def procesar(self):
         total = self.cantidad * self.precio_unitario
         logging.info(f"Factura fue precesada con exito. total de la compra ${total} - cliente:{self.cliente}")
         
-    except ValueError as e : 
+    except ValueError as e: 
         logging.errro(F"Error de validación del cliente {self.cliente}: {e}")
     except Exception as e:
         logging.critical(f"Error inesperado al moemnto de procesar la factura de {self.cliente}: {e}")
     finally:
         logging.info(f"El preceso del facturacion para {self.cliente} finalizo")
+        
+if __name__ == "__main__":
+    factura1 = Factura("Carlos", 10, 1500.25)
+    factura1.procesar()
+    
+    factura2 = Factura("Pedro", 15, 2000.76)
+    factura2.procesar()
+    
+    
+    
+     
         
             
         
