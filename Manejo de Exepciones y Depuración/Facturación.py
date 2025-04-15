@@ -33,7 +33,7 @@ def procesar(self):
             raise ValueError(f"El precio debe ser mayor a cero")
         
         total = self.cantidad * self.precio_unitario
-        logging.info(f"Factura fue precesada con exito. total de la compra{total} - cliente:{self.cliente}")
+        logging.info(f"Factura fue precesada con exito. total de la compra ${total} - cliente:{self.cliente}")
         
     except ValueError as e : 
         logging.errro(F"Error de validación del cliente {self.cliente}: {e}")
