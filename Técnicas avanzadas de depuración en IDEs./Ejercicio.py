@@ -16,6 +16,6 @@ empleados = [
 ]
 
 for emp in empleados:
-    print(f"Empleado: {emp.nombre}. Comisión: {emp.calculo_comision()}")
 
+    print(f"Empleado: {emp.nombre}. Comisión: {emp.calculo_comision()}")
     
